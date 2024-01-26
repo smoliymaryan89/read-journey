@@ -8,4 +8,16 @@ export default defineConfig({
   server: {
     open: true,
   },
+  resolve: {
+    alias: {
+      "@components": "/src/components",
+      "@pages": "/src/pages",
+      "@utils": "/src/utils",
+      "@hooks": "/src/hooks",
+      "@store": "/src/store",
+      "@layouts": "/src/layouts",
+      "@guards": "/src/guards",
+      "@service": "/src/service",
+    },
+  },
 });
