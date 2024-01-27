@@ -1,22 +1,22 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "@hooks/useRedux";
 import { selectUser } from "@store/auth/authSelectors";
 import { logOut } from "@store/auth/authOperations";
 import { resetStore } from "@store/auth/authSlice";
-import { toggleModal } from "@store/modal/modalSlice";
-import { selectModal } from "@store/modal/modalSelectors";
 
 import MobileMenu from "./MobileMenu";
 import Navigation from "./Navigation";
 import Button from "./ui/Button";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const dispatch = useAppDispatch();
   const { name } = useAppSelector(selectUser);
-  const { isOpen } = useAppSelector(selectModal);
 
   const toggleMenu = () => {
-    dispatch(toggleModal("mobileMenu"));
+    setIsOpen((prev) => !prev);
   };
 
   const handleLogOut = () => {
