@@ -1,0 +1,51 @@
+.custom-select__control {
+  @apply !bg-transparent !border-select !outline-none !shadow-none !rounded-12 !py-[12px] !px-[14px] !h-[40px] !w-[120px] md:!h-[46px] md:!w-[153px] md:!p-[14px];
+}
+
+.custom-select__indicator-separator {
+  @apply !hidden;
+}
+
+.custom-select__value-container {
+  @apply !p-0 !h-[16px] !items-start;
+}
+
+.custom-select__single-value {
+  @apply !m-0 !text-12 leading-[1.3] tracking-[-0.24px] !text-current md:!text-14 md:!leading-[1.29] md:!tracking-[-0.28px];
+}
+
+.custom-select__indicator {
+  @apply !p-0 transform  transition-all duration-350;
+}
+
+.custom-select__indicator svg {
+  @apply !h-[16px] !w-[16px] !fill-light-white transform transition-all duration-350;
+}
+
+.custom-select__control--menu-is-open .custom-select__indicator svg {
+  @apply fill-light-white transform rotate-180 transition-all duration-350;
+}
+
+.custom-select__menu {
+  @apply !mt-[4px] !mb-0 !rounded-12 !bg-dark-grey !py-[14px] !pl-[14px] !pr-[48px];
+}
+
+.custom-select__menu-list {
+  @apply !p-0;
+}
+
+.custom-select__option {
+  @apply !p-0 !mb-[7px] last:!mb-0 !text-12 leading-[1.3] tracking-[-0.24px] !text-grey md:!text-14 md:!leading-[1.29] md:!tracking-[-0.28px];
+}
+
+.custom-select__option:active {
+  @apply !bg-transparent;
+}
+
+.custom-select__option--is-focused {
+  @apply !bg-transparent;
+}
+
+.custom-select__option--is-selected {
+  @apply !bg-transparent !text-current;
+}
