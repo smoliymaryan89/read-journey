@@ -14,7 +14,7 @@ export const axiosBaseQuery: BaseQueryFn<{
   data?: AxiosRequestConfig["data"];
   params?: AxiosRequestConfig["params"];
 }> = async ({ url, method, data, params }, { getState }) => {
-  const token = (getState() as AuthState).auth.user.token;
+  const token = (getState() as AuthState).auth.token;
 
   if (token) {
     setAuthHeader(token);
