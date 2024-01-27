@@ -48,6 +48,7 @@ const AddBookForm = ({ handleAddBook }: AddBookFormProps) => {
               name="title"
               value={values.title}
               onChange={handleChange}
+              placeholder="Enter text"
               label="Book title:"
               inputStyles="pl-[77px] pr-[14px] md:pl-[86px]"
               wrapperStyles="mb-[8px]"
@@ -59,6 +60,7 @@ const AddBookForm = ({ handleAddBook }: AddBookFormProps) => {
               name="author"
               value={values.author}
               onChange={handleChange}
+              placeholder="Enter text"
               label="The author:"
               inputStyles="pl-[85px] pr-[14px] md:pl-[95px]"
               wrapperStyles="mb-[8px]"
@@ -70,6 +72,7 @@ const AddBookForm = ({ handleAddBook }: AddBookFormProps) => {
               name="totalPages"
               value={values.totalPages.toString()}
               onChange={handleChange}
+              placeholder="0"
               label="Number of pages:"
               inputStyles="pl-[119px] pr-[14px] md:pl-[135px]"
               wrapperStyles="mb-[20px]"
