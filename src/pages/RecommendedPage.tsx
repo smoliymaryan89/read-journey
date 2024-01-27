@@ -100,7 +100,7 @@ const RecommendedPage = () => {
             isModal={true}
             handleModal={handleModal}
             className={{
-              list: "w-[194px] md:w-[317px]",
+              item: "w-[194px] md:w-[317px]",
               img: "h-[213px] w-[140px] mb-[16px] mx-auto md:w-[153px] md:h-[233px]",
               description: "mb-[20px] md:mb-[32px]",
               title:
