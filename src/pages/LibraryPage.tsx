@@ -19,6 +19,7 @@ import NoOwnBooks from "@components/NoOwnBooks";
 import Recommendations from "@components/Recommendations";
 import CustomSelect from "@components/ui/CustomSelect/CustomSelect";
 import AddBookModalContent from "@components/AddBookModalContent";
+import toast from "react-hot-toast";
 
 const LibraryPage = () => {
   const [select, setSelect] = useState<SelectData | null>(null);
@@ -51,6 +52,9 @@ const LibraryPage = () => {
       .unwrap()
       .then(() => {
         dispatch(toggleModal("addBook"));
+      })
+      .catch((e) => {
+        toast.error(e.data.message);
       });
   };
 
