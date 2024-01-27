@@ -7,6 +7,7 @@ interface ButtonProps {
   title: string;
   className?: string;
   primary?: boolean;
+  disabled?: boolean;
   onClick?: () => void;
 }
 
@@ -16,9 +17,11 @@ const Button = ({
   className,
   onClick,
   primary,
+  disabled,
 }: ButtonProps) => {
   return (
     <button
+      disabled={disabled}
       type={type}
       onClick={onClick}
       className={clsx(
