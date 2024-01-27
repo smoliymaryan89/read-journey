@@ -35,6 +35,7 @@ const FilterForm = ({ handleFilter }: FilterFormProps) => {
               name="title"
               value={values.title}
               onChange={handleChange}
+              placeholder="Enter text"
               label="Book title:"
               inputStyles="pl-[77px] pr-[14px] md:pl-[86px]"
               wrapperStyles="mb-[8px]"
@@ -45,6 +46,7 @@ const FilterForm = ({ handleFilter }: FilterFormProps) => {
               name="author"
               value={values.author}
               onChange={handleChange}
+              placeholder="Enter text"
               label="The author:"
               inputStyles="pl-[85px] pr-[14px] md:pl-[95px]"
               wrapperStyles="mb-[20px]"
