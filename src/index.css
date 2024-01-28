@@ -1,3 +1,27 @@
+@import url("./components/ui/CustomSelect/CustomSelect.module.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-gilroy-medium bg-dark text-light-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-[20px] pt-[20px] pb-[40px] max-w-[375px] md:max-w-[744px] md:pt-[32px] md:pb-[32px] lg:pb-[27px] lg:max-w-[1256px];
+  }
+
+  .section {
+    @apply rounded-30 bg-light-dark w-full py-[40px] px-[20px] md:px-[40px] lg:pb-[28px];
+  }
+}
+
+@layer utilities {
+  .title {
+    @apply text-20 font-gilroy-bold leading-none tracking-[-0.4px] md:text-28 md:leading-[1.14] md:tracking-[0.56px];
+  }
+}
