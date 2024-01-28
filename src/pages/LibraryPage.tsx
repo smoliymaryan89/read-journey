@@ -60,7 +60,7 @@ const LibraryPage = () => {
 
   return (
     <>
-      <Dashboard>
+      <Dashboard className="lg:gap-[78px]">
         <AddBookForm handleAddBook={handleAddBook} />
         <Recommendations />
       </Dashboard>

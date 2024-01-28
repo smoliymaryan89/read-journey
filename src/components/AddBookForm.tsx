@@ -37,7 +37,7 @@ const AddBookForm = ({ handleAddBook }: AddBookFormProps) => {
           <form
             onSubmit={handleSubmit}
             noValidate
-            className="mb-[20px] flex-1 md:mb-0 lg:mb-[78px]"
+            className="mb-[20px] flex-1 md:mb-0"
           >
             <p className="mb-[8px] ml-[14px] text-10 leading-[1.2] tracking-[-0.2px] md:text-14 md:leading-[1.29] md:tracking-[-0.28px]">
               Create your library:
