@@ -18,7 +18,7 @@ const Statistics = ({ progress, totalPages }: StatisticsProps) => {
   );
 
   return (
-    <div className="bg-dark-grey rounded-12 py-[20px] flex flex-col items-center gap-[21px] md:py-[28px] md:w-[321px] md:gap-[16px]">
+    <div className="bg-dark-grey rounded-12 py-[20px] flex flex-col items-center gap-[21px] md:py-[28px] md:w-[321px] md:gap-[16px] lg:w-[313px]">
       <CircleProgress percentage={percentage} />
 
       <div className="flex items-baseline gap-[15px]">
