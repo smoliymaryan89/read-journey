@@ -39,12 +39,12 @@ const Modal = ({ handleModal, children, className }: ModalProps) => {
 
   return createPortal(
     <div
-      className="fixed top-0 left-0 w-screen h-screen bg-overlay flex items-center justify-center"
+      className="fixed top-0 left-0 w-screen h-screen bg-overlay flex items-center justify-center z-40"
       onClick={onBackdropClick}
     >
       <div
         className={clsx(
-          "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 py-[40px] rounded-12 border border-light-grey-20 flex flex-col items-center bg-light-dark w-[335px] sm:min-w-[calc(100vw-40px)] sm:w-0 md:py-[50px] md:w-[500px]",
+          "absolute left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 py-[40px] rounded-12 border border-light-grey-20 flex flex-col items-center bg-light-dark w-[335px] sm:min-w-[calc(100vw-40px)] sm:w-0 md:py-[50px] md:w-[500px]",
           className
         )}
       >
