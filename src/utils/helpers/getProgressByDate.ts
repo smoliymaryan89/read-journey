@@ -24,7 +24,7 @@ const getProgressByDate = ({ progress, totalPages }: getProgressByDateProps) =>
     .reduce(
       (
         acc: DiaryEntry[],
-        { startReading, finishReading, finishPage, startPage, status }
+        { startReading, finishReading, finishPage, startPage, status, speed }
       ) => {
         const date = new Date(finishReading).toDateString();
         const existingEntry = acc.find((entry) => entry.date === date);
@@ -33,11 +33,6 @@ const getProgressByDate = ({ progress, totalPages }: getProgressByDateProps) =>
         const percentageRead = parseFloat(
           ((pagesRead / totalPages) * 100).toFixed(2)
         );
-
-        const startTime = new Date(startReading).getTime();
-        const finishTime = new Date(finishReading).getTime();
-        const readingTimeInHours = (finishTime - startTime) / 3600000;
-        const readingSpeed = Math.round(pagesRead / readingTimeInHours);
 
         if (existingEntry) {
           existingEntry.totalPagesRead =
@@ -48,7 +43,7 @@ const getProgressByDate = ({ progress, totalPages }: getProgressByDateProps) =>
             percent: percentageRead,
             startReading,
             finishReading,
-            readingSpeed,
+            readingSpeed: speed,
           });
         } else {
           acc.push({
@@ -59,7 +54,7 @@ const getProgressByDate = ({ progress, totalPages }: getProgressByDateProps) =>
                 percent: percentageRead,
                 startReading,
                 finishReading,
-                readingSpeed,
+                readingSpeed: speed,
               },
             ],
           });
