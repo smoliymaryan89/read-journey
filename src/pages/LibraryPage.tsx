@@ -9,6 +9,7 @@ import { toggleModal } from "@store/modal/modalSlice";
 import { Book } from "types/book";
 
 import clsx from "clsx";
+import toast from "react-hot-toast";
 import selectData, { SelectData } from "@utils/data/selectData";
 import AddBookForm, { AddFormData } from "@components/AddBookForm";
 import BookItem from "@components/BookItem";
@@ -18,8 +19,7 @@ import Modal from "@components/Modal";
 import NoOwnBooks from "@components/NoOwnBooks";
 import Recommendations from "@components/Recommendations";
 import CustomSelect from "@components/ui/CustomSelect/CustomSelect";
-import AddBookModalContent from "@components/AddBookModalContent";
-import toast from "react-hot-toast";
+import AlertModalContent from "@components/AlertModalContent";
 
 const LibraryPage = () => {
   const [select, setSelect] = useState<SelectData | null>(null);
@@ -116,7 +116,12 @@ const LibraryPage = () => {
           handleModal={() => dispatch(toggleModal("addBook"))}
           className="py-[60px] px-[46px] md:!w-[342px] md:px-[50px]"
         >
-          <AddBookModalContent />
+          <AlertModalContent
+            emoji="👍"
+            title="Good job"
+            text="Your book is now in the library! The joy knows no bounds
+            and now you can start your training"
+          />
         </Modal>
       )}
     </>
