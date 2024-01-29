@@ -7,11 +7,12 @@ interface StatisticsProps {
 }
 
 const Statistics = ({ progress, totalPages }: StatisticsProps) => {
-  const totalPagesRead = progress
-    .filter(({ status }) => status === "inactive")
-    .reduce((acc, page) => acc + (page.finishPage - page.startPage), 0);
-
-  console.log(totalPages);
+  const totalPagesRead = Math.min(
+    progress
+      .filter(({ status }) => status === "inactive")
+      .reduce((acc, page) => acc + (page.finishPage - page.startPage), 1),
+    totalPages
+  );
 
   const percentage = parseFloat(
     ((totalPagesRead / totalPages) * 100).toFixed(2)
