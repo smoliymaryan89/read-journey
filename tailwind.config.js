@@ -68,7 +68,7 @@ export default {
       addBase({
         "@font-face": {
           fontFamily: "Gilroy-Bold",
-          src: "url(./src/assets/fonts/Gilroy-Bold.ttf)",
+          src: "url(assets/fonts/Gilroy-Bold.ttf)",
         },
       });
     }),
@@ -76,7 +76,7 @@ export default {
       addBase({
         "@font-face": {
           fontFamily: "Gilroy-Medium",
-          src: "url(./src/assets/fonts/Gilroy-Medium.ttf)",
+          src: "url(assets/fonts/Gilroy-Medium.ttf)",
         },
       });
     }),
