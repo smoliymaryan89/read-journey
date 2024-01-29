@@ -60,7 +60,7 @@ const BookItem = ({
       ) : (
         <div className="w-full h-[207px] bg-dark-grey rounded-8 mb-[8px] flex items-center justify-center cursor-pointer">
           <img
-            src="./src/assets/images/book.png"
+            src="/images/book.png"
             className={"w-[137px] h-[90px]"}
             onClick={() =>
               handleModal &&
@@ -116,7 +116,7 @@ const BookItem = ({
               width="14"
               height="14"
             >
-              <use href="./src/assets/icons/sprite.svg#icon-trash"></use>
+              <use href="/icons/sprite.svg#icon-trash"></use>
             </svg>
           </button>
         )}

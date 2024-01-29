@@ -78,7 +78,7 @@ const Input = ({
             height="18"
           >
             <use
-              href={`./src/assets/icons/sprite.svg#${
+              href={`/icons/sprite.svg#${
                 showPassword ? "icon-eye" : "icon-eye-off"
               }`}
             ></use>

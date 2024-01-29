@@ -53,7 +53,7 @@ const Modal = ({ handleModal, children, className }: ModalProps) => {
           onClick={handleModal}
         >
           <svg className="stroke-light-white" width="22" height="22">
-            <use href="./src/assets/icons/sprite.svg#icon-close-menu"></use>
+            <use href="/icons/sprite.svg#icon-close-menu"></use>
           </svg>
         </button>
         {children}

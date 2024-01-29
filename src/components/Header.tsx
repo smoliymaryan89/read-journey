@@ -29,7 +29,7 @@ const Header = () => {
       <Link to="/">
         <div className="lg:flex lg:items-center lg:gap-[4px]">
           <svg className="fill-light-white" width="42" height="17">
-            <use href="./src/assets/icons/sprite.svg#icon-logo"></use>
+            <use href="/icons/sprite.svg#icon-logo"></use>
           </svg>
           <span className="hidden text-18 font-gilroy-bold leading-none uppercase tracking-[0.36px] lg:block">
             read journey
@@ -53,7 +53,7 @@ const Header = () => {
 
         <button type="button" className="md:hidden" onClick={toggleMenu}>
           <svg className="stroke-light-white" width="28" height="28">
-            <use href="./src/assets/icons/sprite.svg#icon-open-menu"></use>
+            <use href="/icons/sprite.svg#icon-open-menu"></use>
           </svg>
         </button>
 

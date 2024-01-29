@@ -43,7 +43,7 @@ const Recommendations = () => {
       >
         Home
         <svg className="stroke-light-white" width="20" height="20">
-          <use href="./src/assets/icons/sprite.svg#icon-log-in"></use>
+          <use href="/icons/sprite.svg#icon-log-in"></use>
         </svg>
       </Link>
     </div>

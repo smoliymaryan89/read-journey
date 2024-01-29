@@ -109,7 +109,7 @@ const ReadingPage = () => {
                       width="16"
                       height="16"
                     >
-                      <use href="./src/assets/icons/sprite.svg#icon-hourglass"></use>
+                      <use href="/icons/sprite.svg#icon-hourglass"></use>
                     </svg>
                   </button>
                 </li>
@@ -130,7 +130,7 @@ const ReadingPage = () => {
                       width="16"
                       height="16"
                     >
-                      <use href="./src/assets/icons/sprite.svg#icon-diary"></use>
+                      <use href="/icons/sprite.svg#icon-diary"></use>
                     </svg>
                   </button>
                 </li>
@@ -189,7 +189,7 @@ const ReadingPage = () => {
               height="40"
             >
               <use
-                href={`./src/assets/icons/sprite.svg#${
+                href={`/icons/sprite.svg#${
                   lastSessionStatus === "active"
                     ? "icon-stop-record"
                     : "icon-start-record"

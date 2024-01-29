@@ -52,7 +52,7 @@ const DiaryList = ({ progress, totalPages }: DiaryListProps) => {
                             width="43"
                             height="18"
                           >
-                            <use href="./src/assets/icons/sprite.svg#icon-line-diagram"></use>
+                            <use href="/icons/sprite.svg#icon-line-diagram"></use>
                           </svg>
                           <p className="max-w-[43px] text-10 text-grey leading-[1.2] tracking-[-0.2px] text-center md:text-12 md:leading-[1.17] md:tracking-[-0.24px] md:max-w-[55px]">
                             {readingSpeed} pages per hour
@@ -64,7 +64,7 @@ const DiaryList = ({ progress, totalPages }: DiaryListProps) => {
                             width="14"
                             height="14"
                           >
-                            <use href="./src/assets/icons/sprite.svg#icon-trash"></use>
+                            <use href="/icons/sprite.svg#icon-trash"></use>
                           </svg>
                         </button>
                       </div>

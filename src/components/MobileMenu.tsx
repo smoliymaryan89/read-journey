@@ -28,7 +28,7 @@ const MobileMenu = ({ isOpen, toggleMenu, handleLogOut }: MobileMenuProps) => {
           onClick={toggleMenu}
         >
           <svg className="stroke-light-white" width="28" height="28">
-            <use href="./src/assets/icons/sprite.svg#icon-close-menu"></use>
+            <use href="/icons/sprite.svg#icon-close-menu"></use>
           </svg>
         </button>
 

@@ -81,7 +81,7 @@ const RegistrationForm = () => {
               height="18"
             >
               <use
-                href={`./src/assets/icons/sprite.svg#${
+                href={`/icons/sprite.svg#${
                   touched.name && errors.name
                     ? "icon-error"
                     : touched.name && !errors.name
@@ -128,7 +128,7 @@ const RegistrationForm = () => {
               height="18"
             >
               <use
-                href={`./src/assets/icons/sprite.svg#${
+                href={`/icons/sprite.svg#${
                   touched.email && errors.email
                     ? "icon-error"
                     : touched.email && !errors.email
@@ -183,7 +183,7 @@ const RegistrationForm = () => {
               height="18"
             >
               <use
-                href={`./src/assets/icons/sprite.svg#${
+                href={`/icons/sprite.svg#${
                   touched.password && errors.password
                     ? "icon-error"
                     : touched.password && !errors.password

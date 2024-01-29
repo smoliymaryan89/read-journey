@@ -80,7 +80,7 @@ const LoginForm = () => {
               height="18"
             >
               <use
-                href={`./src/assets/icons/sprite.svg#${
+                href={`/icons/sprite.svg#${
                   touched.email && errors.email
                     ? "icon-error"
                     : touched.email && !errors.email
@@ -132,7 +132,7 @@ const LoginForm = () => {
               height="18"
             >
               <use
-                href={`./src/assets/icons/sprite.svg#${
+                href={`/icons/sprite.svg#${
                   touched.password && errors.password
                     ? "icon-error"
                     : touched.password && !errors.password

@@ -28,7 +28,7 @@ const WorkoutSteps = () => {
       >
         My library
         <svg className="stroke-light-white" width="24" height="24">
-          <use href="./src/assets/icons/sprite.svg#icon-log-in"></use>
+          <use href="/icons/sprite.svg#icon-log-in"></use>
         </svg>
       </Link>
     </div>

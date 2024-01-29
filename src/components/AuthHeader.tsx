@@ -3,7 +3,7 @@ const AuthHeader = () => {
     <>
       <div className="mb-[40px] flex items-center gap-[4px] md:mb-[157px] lg:mb-[107px]">
         <svg className="fill-light-white" width="42" height="17">
-          <use href="./src/assets/icons/sprite.svg#icon-logo"></use>
+          <use href="/icons/sprite.svg#icon-logo"></use>
         </svg>
         <span className="hidden text-18 font-gilroy-bold leading-none uppercase tracking-[0.36px] md:block">
           read journey

@@ -28,7 +28,7 @@ const BookPagination = ({
             width="16"
             height="16"
           >
-            <use href="./src/assets/icons/sprite.svg#icon-prev"></use>
+            <use href="/icons/sprite.svg#icon-prev"></use>
           </svg>
         </button>
       </li>
@@ -46,7 +46,7 @@ const BookPagination = ({
             width="16"
             height="16"
           >
-            <use href="./src/assets/icons/sprite.svg#icon-next"></use>
+            <use href="/icons/sprite.svg#icon-next"></use>
           </svg>
         </button>
       </li>
