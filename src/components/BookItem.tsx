@@ -131,7 +131,8 @@ const BookItem = ({
           primary={false}
           onClick={() => {
             pathname === "/library"
-              ? navigate("/reading", { state: { bookId: _id } })
+              ? (navigate("/reading", { state: { bookId: _id } }),
+                handleModal && handleModal())
               : (async () => {
                   try {
                     await addBook(_id).unwrap();
