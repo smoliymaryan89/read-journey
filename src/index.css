@@ -26,7 +26,7 @@
   }
 
   .diary-item::before {
-    @apply absolute -left-[25px] rounded-4 content-[url("./src/assets/icons/list.svg")] w-[16px] h-[16px] z-[1] md:w-[20px] md:h-[20px] md:-left-[26px] lg:left-[-30px];
+    @apply absolute -left-[25px] rounded-4 content-[url("/icons/list.svg")] w-[16px] h-[16px] z-[1] md:w-[20px] md:h-[20px] md:-left-[26px] lg:left-[-30px];
   }
 
   .diary-item::after {
