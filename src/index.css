@@ -24,4 +24,24 @@
   .title {
     @apply text-20 font-gilroy-bold leading-none tracking-[-0.4px] md:text-28 md:leading-[1.14] md:tracking-[0.56px];
   }
+
+  .diary-item::before {
+    @apply absolute -left-[25px] rounded-4 content-[url("./src/assets/icons/list.svg")] w-[16px] h-[16px] z-[1] md:w-[20px] md:h-[20px] md:-left-[26px] lg:left-[-30px];
+  }
+
+  .diary-item::after {
+    @apply bg-light-dark absolute top-[20px] w-[2px] h-full -left-[18px] content-[""] z-0  lg:-left-[22px];
+  }
+
+  .diary-list-scroll::-webkit-scrollbar {
+    @apply w-[4px] max-h-[4px] rounded-15 bg-transparent;
+  }
+
+  .diary-list-scroll::-webkit-scrollbar-thumb {
+    @apply ml-[10px] rounded-15  bg-dark-grey !w-[100px] !h-[100px];
+  }
+
+  .diary-list-scroll::-webkit-scrollbar-track {
+    @apply bg-transparent my-[16px];
+  }
 }
