@@ -7,7 +7,7 @@ interface CircleProgressProps {
 
 const CircleProgress = ({ percentage }: CircleProgressProps) => {
   return (
-    <div className="w-[116px] h-[116px] md:w-[138px] md:h-[138px] lg:h-[189px] lg:w-[189px]">
+    <div className="w-[116px] h-[116px] md:w-[138px] md:h-[138px] lg:h-[167px] lg:w-[167px]">
       <CircularProgressbar
         value={percentage}
         text="100%"
