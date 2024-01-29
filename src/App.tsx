@@ -73,7 +73,11 @@ const App = () => {
         position="bottom-center"
         toastOptions={{
           duration: 3000,
-          className: "bg-dark-grey text-current",
+          style: {
+            backgroundColor: "#262626",
+            fontFamily: "inherit",
+            color: "#F9F9F9",
+          },
         }}
       />
     </>
