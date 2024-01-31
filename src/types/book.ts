@@ -22,6 +22,7 @@ export interface RecommendBookParams {
 }
 
 export interface BookProgress {
+  _id: string;
   startPage: number;
   startReading: string;
   finishPage: number;
@@ -61,6 +62,11 @@ export interface BookInfoResponse extends Omit<Book, "recommend"> {
 }
 
 export interface StartReadingParams {
-  id: "string";
+  id: string;
   page: number;
+}
+
+export interface RemoveReadingParams {
+  bookId: string;
+  readingId: string;
 }
