@@ -34,7 +34,9 @@ const ReadingForm = ({ handleReading, isReadingStarted }: ReadingFormProps) => {
           <form
             onSubmit={handleSubmit}
             noValidate
-            className={clsx("mb-[40px] flex-1 md:mb-0 lg:flex-none")}
+            className={clsx(
+              "mb-[40px] flex-1 md:mb-0 lg:flex-none lg:w-[313px]"
+            )}
           >
             <p className="mb-[8px] ml-[14px] text-10 leading-[1.2] tracking-[-0.2px] md:text-14 md:leading-[1.29] md:tracking-[-0.28px]">
               {isReadingStarted ? "Stop page:" : "Start page:"}

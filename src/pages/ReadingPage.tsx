@@ -69,10 +69,10 @@ const ReadingPage = () => {
     <>
       <Dashboard
         className={clsx(
-          "lg:gap-[40px]",
+          "md:gap-[40px]",
           bookInfo?.progress.length === 0 ||
             bookInfo?.progress[0]?.status !== "inactive"
-            ? "pb-[40px] md:gap-[40px] md:pb-[84px]"
+            ? "pb-[40px] md:pb-[84px]"
             : "md:pr-[16px] md:pb-[16px] justify-between"
         )}
       >
@@ -156,6 +156,7 @@ const ReadingPage = () => {
               <DiaryList
                 progress={bookInfo?.progress}
                 totalPages={bookInfo?.totalPages}
+                bookId={bookInfo?._id}
               />
             )}
           </div>
