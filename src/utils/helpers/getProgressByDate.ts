@@ -5,6 +5,7 @@ interface DiaryEntryDetail {
   startReading: string;
   finishReading: string;
   readingSpeed: number;
+  _id: string;
 }
 
 interface DiaryEntry {
@@ -24,7 +25,15 @@ const getProgressByDate = ({ progress, totalPages }: getProgressByDateProps) =>
     .reduce(
       (
         acc: DiaryEntry[],
-        { startReading, finishReading, finishPage, startPage, status, speed }
+        {
+          startReading,
+          finishReading,
+          finishPage,
+          startPage,
+          status,
+          speed,
+          _id,
+        }
       ) => {
         const date = new Date(finishReading).toDateString();
         const existingEntry = acc.find((entry) => entry.date === date);
@@ -44,6 +53,7 @@ const getProgressByDate = ({ progress, totalPages }: getProgressByDateProps) =>
             startReading,
             finishReading,
             readingSpeed: speed,
+            _id,
           });
         } else {
           acc.push({
@@ -55,6 +65,7 @@ const getProgressByDate = ({ progress, totalPages }: getProgressByDateProps) =>
                 startReading,
                 finishReading,
                 readingSpeed: speed,
+                _id,
               },
             ],
           });
