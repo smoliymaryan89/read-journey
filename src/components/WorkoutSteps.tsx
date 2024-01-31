@@ -1,3 +1,5 @@
+import workoutSteps from "@utils/data/workoutSteps";
+import clsx from "clsx";
 import { Link } from "react-router-dom";
 
 const WorkoutSteps = () => {
@@ -7,19 +9,19 @@ const WorkoutSteps = () => {
         Start your workout
       </h2>
 
-      <ul>
-        <li className="relative text-14 leading-[1.29] tracking-[-0.28px] ml-[52px] mb-[20px] before:content-['1'] max-w-[193px] before:w-[40px] before:h-[40px] before:rounded-full before:bg-light-white before:text-light-dark before:text-center before:text-18 before:font-gilroy-bold before:leading-none before:tracking-[-0.36px] before:flex before:items-center before:justify-center before:absolute before:top-0 before:left-[-52px]  before:md:w-[44px] before:md:h-[44px] before:md:text-20 before:md:tracking-[-0.4px] md:before:left-[-56px]">
-          Create a personal library:{" "}
-          <span className="text-grey">
-            add the books you intend to read to it.
-          </span>
-        </li>
-        <li className="relative text-14 leading-[1.29] tracking-[-0.28px] ml-[52px] mb-[14px] before:content-['2'] before:w-[40px] before:h-[40px] before:rounded-full before:bg-light-white before:text-light-dark before:text-center before:text-18 before:font-gilroy-bold before:leading-none before:tracking-[-0.36px] before:flex before:items-center before:justify-center before:absolute before:top-0 before:left-[-52px] before:md:w-[44px] before:md:h-[44px] before:md:text-20 before:md:tracking-[-0.4px] md:before:left-[-56px] md:mb-[20px] md:max-w-[197px]">
-          Create your first workout:{" "}
-          <span className="text-grey">
-            define a goal, choose a period, start training.
-          </span>
-        </li>
+      <ul className="mb-[14px] md:mb-[20px]">
+        {workoutSteps.map(({ text, span }, index) => (
+          <li
+            className={clsx(
+              "relative text-14 leading-[1.29] tracking-[-0.28px] ml-[52px] before:w-[40px] before:h-[40px] before:rounded-full before:bg-light-white before:text-light-dark before:text-center before:text-18 before:font-gilroy-bold before:leading-none before:tracking-[-0.36px] before:flex before:items-center before:justify-center before:absolute before:top-0 before:left-[-52px] before:md:w-[44px] before:md:h-[44px] before:md:text-20 before:md:tracking-[-0.4px] md:before:left-[-56px]",
+              index === 0
+                ? "mb-[20px] before:content-['1'] max-w-[193px]"
+                : "before:content-['2'] md:max-w-[197px]"
+            )}
+          >
+            {text} <span className="text-grey">{span}</span>
+          </li>
+        ))}
       </ul>
 
       <Link
