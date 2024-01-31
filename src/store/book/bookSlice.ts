@@ -8,6 +8,7 @@ import {
   OwnBookParams,
   RecommendBookParams,
   RemoveBookResponse,
+  RemoveReadingParams,
   StartReadingParams,
 } from "types/book";
 
@@ -51,6 +52,14 @@ export const bookApi = createApi({
       query: (data) => ({ url: "/books/reading/finish", method: "POST", data }),
       invalidatesTags: ["InfoBook"],
     }),
+    removeReading: build.mutation<BookInfoResponse, RemoveReadingParams>({
+      query: (params) => ({
+        url: "/books/reading",
+        method: "DELETE",
+        params,
+      }),
+      invalidatesTags: ["InfoBook"],
+    }),
   }),
 });
 
@@ -63,4 +72,5 @@ export const {
   useGetBookInfoQuery,
   useStartReadingMutation,
   useFinishReadingMutation,
+  useRemoveReadingMutation,
 } = bookApi;

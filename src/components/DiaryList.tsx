@@ -1,3 +1,4 @@
+import { useRemoveReadingMutation } from "@store/book/bookSlice";
 import { BookProgress } from "types/book";
 
 import clsx from "clsx";
@@ -8,9 +9,12 @@ import getReadingTime from "@utils/helpers/getReadingTime";
 interface DiaryListProps {
   progress: BookProgress[];
   totalPages: number;
+  bookId: string;
 }
 
-const DiaryList = ({ progress, totalPages }: DiaryListProps) => {
+const DiaryList = ({ progress, totalPages, bookId }: DiaryListProps) => {
+  const [removeReading] = useRemoveReadingMutation();
+
   return (
     <div className="overflow-y-auto rounded-12 diary-list-scroll h-[211px] md:w-[321px] md:h-[252px] lg:w-[313px] lg:h-[373px]">
       <ul className="rounded-12 mr-[7px] bg-dark-grey p-[16px] pl-[41px] md:pb-[30px] md:pl-[46px]  lg:p-[20px] lg:pb-[28px] lg:pl-[50px]">
@@ -34,7 +38,13 @@ const DiaryList = ({ progress, totalPages }: DiaryListProps) => {
 
               <ul className="mb-[17px] md:mb-[14px]">
                 {detail.map(
-                  ({ percent, startReading, finishReading, readingSpeed }) => (
+                  ({
+                    percent,
+                    startReading,
+                    finishReading,
+                    readingSpeed,
+                    _id,
+                  }) => (
                     <li className="flex justify-between mb-[27px] last:mb-0">
                       <div>
                         <p className="text-14 leading-[1.29] mb-[4px] tracking-[-0.28px] md:text-20 md:leading-none md:tracking-[-0.4px] md:mb-[8px]">
@@ -58,7 +68,13 @@ const DiaryList = ({ progress, totalPages }: DiaryListProps) => {
                             {readingSpeed} pages per hour
                           </p>
                         </div>
-                        <button type="button" className="self-start">
+                        <button
+                          type="button"
+                          className="self-start"
+                          onClick={() =>
+                            removeReading({ bookId, readingId: _id })
+                          }
+                        >
                           <svg
                             className="stroke-grey fill-transparent md:w-[20px] md:h-[20px] lg:w-[14px] lg:h-[14px]"
                             width="14"
