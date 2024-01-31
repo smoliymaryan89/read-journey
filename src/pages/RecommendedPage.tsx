@@ -89,8 +89,14 @@ const RecommendedPage = () => {
 
         {isFetching ? (
           <Loader className="h-[248px] md:h-[523px]" />
+        ) : data && data.results.length > 0 ? (
+          <BookList books={data} handleModal={handleModal} />
         ) : (
-          data && <BookList books={data} handleModal={handleModal} />
+          <div className="flex items-center justify-center h-3/4">
+            <p className="text-14 md:text-2xl lg:text-28 text-light-white">
+              No books found for your request 😓
+            </p>
+          </div>
         )}
       </section>
 
