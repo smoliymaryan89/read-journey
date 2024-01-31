@@ -65,7 +65,7 @@ const Input = ({
         <button
           type="button"
           className={clsx(
-            "absolute top-[13px] outline-none md:top-[15px]",
+            "absolute top-[13px] z-[1] outline-none md:top-[15px]",
             (touched && errors) || (touched && !errors)
               ? "right-[45px] md:right-[50px]"
               : "right-[16px]"
