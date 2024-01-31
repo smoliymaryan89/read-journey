@@ -16,6 +16,7 @@ const BookPagination = ({
     <ul className="flex items-center gap-[8px]">
       <li>
         <button
+          type="button"
           className="w-[32px] h-[32px] border border-grey-20 rounded-full flex items-center justify-center md:w-[40px] md:h-[40px]"
           disabled={page === 1}
           onClick={() => handlePage(BtnType.Prev)}
@@ -34,6 +35,7 @@ const BookPagination = ({
       </li>
       <li>
         <button
+          type="button"
           className="w-[32px] h-[32px] border border-grey-20 rounded-full flex items-center justify-center md:w-[40px] md:h-[40px]"
           disabled={totalPages === page}
           onClick={() => handlePage(BtnType.Next)}

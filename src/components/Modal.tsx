@@ -49,6 +49,7 @@ const Modal = ({ handleModal, children, className }: ModalProps) => {
         )}
       >
         <button
+          type="button"
           className="absolute top-[16px] right-[16px]"
           onClick={handleModal}
         >
