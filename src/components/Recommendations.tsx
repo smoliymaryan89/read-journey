@@ -5,6 +5,7 @@ import { useGetRecommendedBooksQuery } from "@store/book/bookSlice";
 import getRandomBooks from "@utils/helpers/getRandomBooks";
 import Loader from "./ui/Loader";
 import BookList from "./BookList";
+import Icon from "./ui/Icon";
 
 const Recommendations = () => {
   const { data, isFetching } = useGetRecommendedBooksQuery({});
@@ -42,9 +43,7 @@ const Recommendations = () => {
         className="text-12 leading-[1.17] tracking-[-0.24px] text-grey underline hover:text-current transition-colors duration-350 flex justify-between items-center"
       >
         Home
-        <svg className="stroke-light-white" width="20" height="20">
-          <use href="/icons/sprite.svg#icon-log-in"></use>
-        </svg>
+        <Icon className="stroke-light-white" w={20} iconName="icon-log-in" />
       </Link>
     </div>
   );

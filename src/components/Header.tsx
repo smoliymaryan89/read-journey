@@ -8,6 +8,7 @@ import { resetStore } from "@store/auth/authSlice";
 import MobileMenu from "./MobileMenu";
 import Navigation from "./Navigation";
 import Button from "./ui/Button";
+import Icon from "./ui/Icon";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +29,12 @@ const Header = () => {
     <header className="py-[11px] px-[20px] mb-[10px] bg-light-dark rounded-15 flex items-center justify-between md:py-[17px] md:px-[24px] md:mb-[16px] lg:px-[16px]">
       <Link to="/">
         <div className="lg:flex lg:items-center lg:gap-[4px]">
-          <svg className="fill-light-white" width="42" height="17">
-            <use href="/icons/sprite.svg#icon-logo"></use>
-          </svg>
+          <Icon
+            className="fill-light-white"
+            w={42}
+            h={17}
+            iconName="icon-logo"
+          />
           <span className="hidden text-18 font-gilroy-bold leading-none uppercase tracking-[0.36px] lg:block">
             read journey
           </span>
@@ -52,9 +56,11 @@ const Header = () => {
         </div>
 
         <button type="button" className="md:hidden" onClick={toggleMenu}>
-          <svg className="stroke-light-white" width="28" height="28">
-            <use href="/icons/sprite.svg#icon-open-menu"></use>
-          </svg>
+          <Icon
+            className="stroke-light-white"
+            w={28}
+            iconName="icon-open-menu"
+          />
         </button>
 
         <Button

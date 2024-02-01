@@ -1,6 +1,8 @@
-import clsx from "clsx";
 import { MouseEvent, ReactNode, useEffect } from "react";
 import { createPortal } from "react-dom";
+
+import clsx from "clsx";
+import Icon from "./ui/Icon";
 
 interface ModalProps {
   children: ReactNode;
@@ -53,9 +55,11 @@ const Modal = ({ handleModal, children, className }: ModalProps) => {
           className="absolute top-[16px] right-[16px]"
           onClick={handleModal}
         >
-          <svg className="stroke-light-white" width="22" height="22">
-            <use href="/icons/sprite.svg#icon-close-menu"></use>
-          </svg>
+          <Icon
+            className="stroke-light-white"
+            w={22}
+            iconName="icon-close-menu"
+          />
         </button>
         {children}
       </div>

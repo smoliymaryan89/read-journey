@@ -8,6 +8,7 @@ import { Book } from "types/book";
 import clsx from "clsx";
 import toast from "react-hot-toast";
 import Button from "./ui/Button";
+import Icon from "./ui/Icon";
 
 interface BookItemProps extends Omit<Book, "recommend"> {
   isModal?: boolean;
@@ -111,13 +112,11 @@ const BookItem = ({
             onClick={() => removeBook(_id)}
             className="flex items-center justify-center bg-red-10 w-[28px] h-[28px] border border-red-20 rounded-full hover:border-light-red transition-colors duration-350"
           >
-            <svg
+            <Icon
               className="stroke-light-red fill-transparent"
-              width="14"
-              height="14"
-            >
-              <use href="/icons/sprite.svg#icon-trash"></use>
-            </svg>
+              w={14}
+              iconName="icon-trash"
+            />
           </button>
         )}
       </div>

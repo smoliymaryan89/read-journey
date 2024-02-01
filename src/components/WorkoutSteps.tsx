@@ -1,6 +1,7 @@
-import workoutSteps from "@utils/data/workoutSteps";
-import clsx from "clsx";
 import { Link } from "react-router-dom";
+import clsx from "clsx";
+import Icon from "./ui/Icon";
+import workoutSteps from "@utils/data/workoutSteps";
 
 const WorkoutSteps = () => {
   return (
@@ -29,9 +30,7 @@ const WorkoutSteps = () => {
         className="text-14 leading-[1.29] tracking-[-0.28px] text-grey underline hover:text-current transition-colors duration-350 flex justify-between items-center"
       >
         My library
-        <svg className="stroke-light-white" width="24" height="24">
-          <use href="/icons/sprite.svg#icon-log-in"></use>
-        </svg>
+        <Icon className="stroke-light-white" w={24} iconName="icon-log-in" />
       </Link>
     </div>
   );

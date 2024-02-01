@@ -5,6 +5,7 @@ import clsx from "clsx";
 import formatTime from "@utils/helpers/formatTime";
 import getProgressByDate from "@utils/helpers/getProgressByDate";
 import getReadingTime from "@utils/helpers/getReadingTime";
+import Icon from "./ui/Icon";
 
 interface DiaryListProps {
   progress: BookProgress[];
@@ -57,13 +58,12 @@ const DiaryList = ({ progress, totalPages, bookId }: DiaryListProps) => {
 
                       <div className="flex gap-[8px]">
                         <div>
-                          <svg
+                          <Icon
                             className="mb-[7px] md:w-[59px] md:h-[25px]"
-                            width="43"
-                            height="18"
-                          >
-                            <use href="/icons/sprite.svg#icon-line-diagram"></use>
-                          </svg>
+                            w={43}
+                            h={18}
+                            iconName="icon-line-diagram"
+                          />
                           <p className="max-w-[43px] text-10 text-grey leading-[1.2] tracking-[-0.2px] text-center md:text-12 md:leading-[1.17] md:tracking-[-0.24px] md:max-w-[55px]">
                             {readingSpeed} pages per hour
                           </p>
@@ -75,13 +75,11 @@ const DiaryList = ({ progress, totalPages, bookId }: DiaryListProps) => {
                             removeReading({ bookId, readingId: _id })
                           }
                         >
-                          <svg
+                          <Icon
                             className="stroke-grey fill-transparent md:w-[20px] md:h-[20px] lg:w-[14px] lg:h-[14px]"
-                            width="14"
-                            height="14"
-                          >
-                            <use href="/icons/sprite.svg#icon-trash"></use>
-                          </svg>
+                            w={14}
+                            iconName="icon-trash"
+                          />
                         </button>
                       </div>
                     </li>

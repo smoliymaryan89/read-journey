@@ -1,5 +1,6 @@
-import clsx from "clsx";
 import { ChangeEvent, FocusEvent, ReactNode } from "react";
+import clsx from "clsx";
+import Icon from "./Icon";
 
 type Type = "text" | "email" | "password" | "number";
 
@@ -72,17 +73,11 @@ const Input = ({
           )}
           onClick={toggleShowPassword}
         >
-          <svg
+          <Icon
             className="stroke-light-white md:w-[20px] md:h-[20px]"
-            width="18"
-            height="18"
-          >
-            <use
-              href={`/icons/sprite.svg#${
-                showPassword ? "icon-eye" : "icon-eye-off"
-              }`}
-            ></use>
-          </svg>
+            w={18}
+            iconName={showPassword ? "icon-eye" : "icon-eye-off"}
+          />
         </button>
       )}
 

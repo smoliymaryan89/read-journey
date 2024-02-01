@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Navigation from "./Navigation";
 import Button from "./ui/Button";
+import Icon from "./ui/Icon";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -27,9 +28,11 @@ const MobileMenu = ({ isOpen, toggleMenu, handleLogOut }: MobileMenuProps) => {
           className="absolute top-[34px] right-[40px]"
           onClick={toggleMenu}
         >
-          <svg className="stroke-light-white" width="28" height="28">
-            <use href="/icons/sprite.svg#icon-close-menu"></use>
-          </svg>
+          <Icon
+            className="stroke-light-white"
+            w={28}
+            iconName="icon-close-menu"
+          />
         </button>
 
         <div className="flex-grow flex items-center">

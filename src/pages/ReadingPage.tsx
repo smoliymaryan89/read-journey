@@ -20,6 +20,7 @@ import Statistics from "@components/Statistics";
 import DiaryList from "@components/DiaryList";
 import Modal from "@components/Modal";
 import AlertModalContent from "@components/AlertModalContent";
+import Icon from "@components/ui/Icon";
 
 const ReadingPage = () => {
   const { state } = useLocation();
@@ -99,18 +100,16 @@ const ReadingPage = () => {
                       setIsActive({ diary: true, statistics: false })
                     }
                   >
-                    <svg
+                    <Icon
                       className={clsx(
                         " md:w-[20px] md:h-[20px]",
                         isActive.diary
                           ? "fill-light-white stroke-light-white"
                           : "fill-grey stroke-grey transition-colors duration-350 hover:fill-light-white hover:stroke-light-white"
                       )}
-                      width="16"
-                      height="16"
-                    >
-                      <use href="/icons/sprite.svg#icon-hourglass"></use>
-                    </svg>
+                      w={16}
+                      iconName="icon-hourglass"
+                    />
                   </button>
                 </li>
                 <li className="h-[16px] md:h-[20px]">
@@ -120,18 +119,16 @@ const ReadingPage = () => {
                       setIsActive({ diary: false, statistics: true })
                     }
                   >
-                    <svg
+                    <Icon
                       className={clsx(
                         "fill-transparent md:w-[20px] md:h-[20px]",
                         isActive.statistics
                           ? "stroke-light-white"
                           : "stroke-grey transition-colors duration-350 hover:stroke-light-white"
                       )}
-                      width="16"
-                      height="16"
-                    >
-                      <use href="/icons/sprite.svg#icon-diary"></use>
-                    </svg>
+                      w={16}
+                      iconName="icon-diary"
+                    />
                   </button>
                 </li>
               </ul>
@@ -184,19 +181,15 @@ const ReadingPage = () => {
               {...bookInfo}
             />
 
-            <svg
+            <Icon
               className="mx-auto fill-red md:w-[50px] md:h-[50px]"
-              width="40"
-              height="40"
-            >
-              <use
-                href={`/icons/sprite.svg#${
-                  lastSessionStatus === "active"
-                    ? "icon-stop-record"
-                    : "icon-start-record"
-                }`}
-              ></use>
-            </svg>
+              w={40}
+              iconName={
+                lastSessionStatus === "active"
+                  ? "icon-stop-record"
+                  : "icon-start-record"
+              }
+            />
           </>
         )}
       </section>

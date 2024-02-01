@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import Button from "@components/ui/Button";
 import Input from "@components/ui/Input";
 import AuthErrorMessage from "./AuthErrorMessage";
+import AuthIconValidation from "./ui/AuthIconValidation";
 
 const RegistrationForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -68,28 +69,7 @@ const RegistrationForm = () => {
                 : "mb-[8px] md:mb-[14px]"
             )}
           >
-            <svg
-              className={clsx(
-                "absolute right-[16px] top-[13px] md:right-[18px] md:top-[15px] md:w-[20] md:h-[20]",
-                touched.name && errors.name
-                  ? "fill-red"
-                  : touched.name && !errors.name
-                  ? "fill-green"
-                  : ""
-              )}
-              width="18"
-              height="18"
-            >
-              <use
-                href={`/icons/sprite.svg#${
-                  touched.name && errors.name
-                    ? "icon-error"
-                    : touched.name && !errors.name
-                    ? "icon-check"
-                    : ""
-                }`}
-              ></use>
-            </svg>
+            <AuthIconValidation touched={touched.name} errors={errors.name} />
 
             {touched.name && errors.name ? (
               <AuthErrorMessage message={errors.name} />
@@ -115,28 +95,7 @@ const RegistrationForm = () => {
                 : "mb-[8px] md:mb-[14px]"
             )}
           >
-            <svg
-              className={clsx(
-                "absolute right-[16px] top-[13px] md:right-[18px] md:top-[15px] md:w-[20] md:h-[20]",
-                touched.email && errors.email
-                  ? "fill-red"
-                  : touched.email && !errors.email
-                  ? "fill-green"
-                  : ""
-              )}
-              width="18"
-              height="18"
-            >
-              <use
-                href={`/icons/sprite.svg#${
-                  touched.email && errors.email
-                    ? "icon-error"
-                    : touched.email && !errors.email
-                    ? "icon-check"
-                    : ""
-                }`}
-              ></use>
-            </svg>
+            <AuthIconValidation touched={touched.email} errors={errors.email} />
 
             {touched.email && errors.email ? (
               <AuthErrorMessage message={errors.email} />
@@ -170,28 +129,10 @@ const RegistrationForm = () => {
               touched.password && errors.password ? "mb-[32px]" : "mb-[32px]"
             )}
           >
-            <svg
-              className={clsx(
-                "absolute right-[16px] top-[13px] md:right-[18px] md:top-[15px] md:w-[20px] md:h-[20px]",
-                touched.password && errors.password
-                  ? "fill-red"
-                  : touched.password && !errors.password
-                  ? "fill-green"
-                  : ""
-              )}
-              width="18"
-              height="18"
-            >
-              <use
-                href={`/icons/sprite.svg#${
-                  touched.password && errors.password
-                    ? "icon-error"
-                    : touched.password && !errors.password
-                    ? "icon-check"
-                    : ""
-                }`}
-              ></use>
-            </svg>
+            <AuthIconValidation
+              touched={touched.password}
+              errors={errors.password}
+            />
 
             {touched.password && errors.password ? (
               <AuthErrorMessage message={errors.password} />
